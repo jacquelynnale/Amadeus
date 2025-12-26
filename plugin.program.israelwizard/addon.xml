@@ -73,8 +73,8 @@ Specially designed for Hebrew viewing!
         
         <platform>all</platform>
         <license>GPL-3.0-only</license>
-        <website>https://github.com/israelwizard/kodirealdebridisraelwizard</website>
-        <source>https://github.com/israelwizard/kodirealdebridisraelwizard</source>
+        <website>https://github.com/jacquelynnale/kodirealdebridisraelwizard</website>
+        <source>https://github.com/jacquelynnale/kodirealdebridisraelwizard</source>
         
         <assets>
             <icon>resources/icon.png</icon>

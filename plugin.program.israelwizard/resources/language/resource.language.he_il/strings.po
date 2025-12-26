@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: plugin.program.israelwizard 1.0.0\n"
-"Report-Msgid-Bugs-To: https://github.com/israelwizard/kodirealdebridisraelwizard\n"
+"Report-Msgid-Bugs-To: https://github.com/jacquelynnale/kodirealdebridisraelwizard\n"
 "POT-Creation-Date: 2024-12-26 00:00+0200\n"
 "PO-Revision-Date: 2024-12-26 00:00+0200\n"
 "Last-Translator: Israel Kodi Community\n"

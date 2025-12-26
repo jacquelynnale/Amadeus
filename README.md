@@ -38,7 +38,7 @@
 1. פתח קודי → הגדרות → מערכת → תוספים
 2. הפעל "מקורות לא ידועים"
 3. חזור להגדרות → מנהל קבצים → הוסף מקור
-4. הזן: `https://israelwizard.github.io/kodirealdebridisraelwizard`
+4. הזן: `https://jacquelynnale.github.io/kodirealdebridisraelwizard`
 5. תן שם: `Israel Wizard`
 6. חזור לתוספים → התקן מקובץ ZIP → Israel Wizard
 7. בחר `repository.israelwizard-1.0.0.zip`
@@ -135,7 +135,7 @@
 
 ```bash
 # Clone repository
-git clone https://github.com/israelwizard/kodirealdebridisraelwizard.git
+git clone https://github.com/jacquelynnale/kodirealdebridisraelwizard.git
 
 # Generate repository files
 python scripts/create_repository.py --validate
