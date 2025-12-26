@@ -53,6 +53,22 @@ REPOSITORIES = {
         'description': 'מאגר POV לסטרימינג',
         'priority': 3,
     },
+    'jurialmunkey': {
+        'id': 'repository.jurialmunkey',
+        'name': 'JurialMunkey Repository',
+        'url': 'https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repository.jurialmunkey-3.4.zip',
+        'icon': 'https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/icon.png',
+        'description': 'מאגר לסקין Arctic Horizon 2',
+        'priority': 4,
+    },
+    'fentastic': {
+        'id': 'repository.fentastic',
+        'name': 'Fentastic Repository',
+        'url': 'https://github.com/ivarbrandt/repository.fentastic/raw/main/repository.fentastic-1.0.1.zip',
+        'icon': 'https://github.com/ivarbrandt/repository.fentastic/raw/main/icon.png',
+        'description': 'מאגר לסקין FENTastic',
+        'priority': 5,
+    },
     'hooty': {
         'id': 'repository.hooty',
         'name': 'Hooty Repository (Otaku)',

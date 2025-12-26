@@ -117,6 +117,25 @@ UTILITY_ADDONS = {
     },
 }
 
+SKIN_ADDONS = {
+    'ah2': {
+        'id': 'skin.arctic.horizon.2',
+        'name': 'Arctic Horizon 2',
+        'repo': 'repository.jurialmunkey',
+        'description': 'עיצוב פרימיום דמוי נטפליקס',
+        'priority': 1,
+        'essential': True,
+    },
+    'fentastic': {
+        'id': 'skin.fentastic',
+        'name': 'FENTastic',
+        'repo': 'repository.fentastic',
+        'description': 'עיצוב מהיר במיוחד ל-Firestick',
+        'priority': 2,
+        'essential': True,
+    },
+}
+
 # Hebrew language pack
 LANGUAGE_ADDON = {
     'id': 'resource.language.he_il',
@@ -212,6 +231,7 @@ class AddonInstaller:
             'video': VIDEO_ADDONS,
             'subtitle': SUBTITLE_ADDONS,
             'utility': UTILITY_ADDONS,
+            'skin': SKIN_ADDONS,
         }
         
         if category not in addons_dict:
@@ -261,6 +281,7 @@ class AddonInstaller:
             ('video', VIDEO_ADDONS),
             ('subtitle', SUBTITLE_ADDONS),
             ('utility', UTILITY_ADDONS),
+            ('skin', SKIN_ADDONS),
         ]
         
         total_addons = sum(len(addons) for _, addons in all_addons)
@@ -295,7 +316,7 @@ class AddonInstaller:
         """Install only essential addons."""
         essential = []
         
-        for addons_dict in [VIDEO_ADDONS, SUBTITLE_ADDONS, UTILITY_ADDONS]:
+        for addons_dict in [VIDEO_ADDONS, SUBTITLE_ADDONS, UTILITY_ADDONS, SKIN_ADDONS]:
             for key, info in addons_dict.items():
                 if info.get('essential', False):
                     essential.append(info)
@@ -393,6 +414,7 @@ class AddonInstaller:
             ('video', VIDEO_ADDONS),
             ('subtitle', SUBTITLE_ADDONS),
             ('utility', UTILITY_ADDONS),
+            ('skin', SKIN_ADDONS),
         ]:
             for key, info in addons_dict.items():
                 addons.append({
