@@ -17,9 +17,8 @@ from xml.dom import minidom
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ADDONS = ['plugin.program.israelwizard', 'repository.israelwizard']
-OUTPUT_DIR = os.path.join(REPO_ROOT, 'repository.israelwizard')
-RELEASES_DIR = os.path.join(REPO_ROOT, 'releases')
-
+OUTPUT_DIR = REPO_ROOT  # addons.xml in root
+ZIPS_DIR = os.path.join(REPO_ROOT, 'zips')
 
 def calculate_md5(filepath):
     """Calculate MD5 hash of a file."""
@@ -29,8 +28,61 @@ def calculate_md5(filepath):
             hash_md5.update(chunk)
     return hash_md5.hexdigest()
 
+# ... (skip get_addon_xml) ...
 
-def get_addon_xml(addon_path):
+# ... (skip generate_addons_xml) ...
+
+def save_addons_xml(content):
+    """Save addons.xml and generate MD5."""
+    # Save addons.xml to root
+    addons_path = os.path.join(OUTPUT_DIR, 'addons.xml')
+    with open(addons_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    print(f'[OK] Generated: addons.xml')
+    
+    # Generate and save MD5
+    md5_hash = calculate_md5(addons_path)
+    md5_path = os.path.join(OUTPUT_DIR, 'addons.xml.md5')
+    with open(md5_path, 'w', encoding='utf-8') as f:
+        f.write(md5_hash)
+    print(f'[OK] Generated: addons.xml.md5 ({md5_hash})')
+
+
+def create_addon_zip(addon_name, version=None):
+    """Create ZIP package for an addon in zips/addon_id/."""
+    addon_path = os.path.join(REPO_ROOT, addon_name)
+    if not os.path.isdir(addon_path):
+        print(f'✗ Addon not found: {addon_name}')
+        return None
+    
+    # Get version from addon.xml if not provided
+    if not version:
+        addon_xml_path = os.path.join(addon_path, 'addon.xml')
+        tree = ElementTree.parse(addon_xml_path)
+        version = tree.getroot().get('version', '1.0.0')
+    
+    # Create zips/addon_id/ folder
+    addon_zips_dir = os.path.join(ZIPS_DIR, addon_name)
+    os.makedirs(addon_zips_dir, exist_ok=True)
+    
+    zip_name = f'{addon_name}-{version}.zip'
+    zip_path = os.path.join(addon_zips_dir, zip_name)
+    
+    with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
+        for root, dirs, files in os.walk(addon_path):
+            # Skip unwanted directories
+            dirs[:] = [d for d in dirs if d not in ['.git', '__pycache__', '.idea', 'zips', 'releases']]
+            
+            for file in files:
+                if file.endswith(('.pyc', '.pyo', '.DS_Store')):
+                    continue
+                
+                file_path = os.path.join(root, file)
+                arcname = os.path.relpath(file_path, REPO_ROOT)
+                zf.write(file_path, arcname)
+    
+    print(f'[OK] Created: {zip_path}')
+    return zip_path
     """Parse and return addon.xml content."""
     addon_xml_path = os.path.join(addon_path, 'addon.xml')
     if not os.path.exists(addon_xml_path):
@@ -63,9 +115,7 @@ def generate_addons_xml():
 
 def save_addons_xml(content):
     """Save addons.xml and generate MD5."""
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    
-    # Save addons.xml
+    # Save addons.xml to root
     addons_path = os.path.join(OUTPUT_DIR, 'addons.xml')
     with open(addons_path, 'w', encoding='utf-8') as f:
         f.write(content)
@@ -80,7 +130,7 @@ def save_addons_xml(content):
 
 
 def create_addon_zip(addon_name, version=None):
-    """Create ZIP package for an addon."""
+    """Create ZIP package for an addon in zips/addon_id/."""
     addon_path = os.path.join(REPO_ROOT, addon_name)
     if not os.path.isdir(addon_path):
         print(f'✗ Addon not found: {addon_name}')
@@ -92,24 +142,30 @@ def create_addon_zip(addon_name, version=None):
         tree = ElementTree.parse(addon_xml_path)
         version = tree.getroot().get('version', '1.0.0')
     
-    os.makedirs(RELEASES_DIR, exist_ok=True)
+    # Create zips/addon_id/ folder
+    addon_zips_dir = os.path.join(ZIPS_DIR, addon_name)
+    os.makedirs(addon_zips_dir, exist_ok=True)
+    
     zip_name = f'{addon_name}-{version}.zip'
-    zip_path = os.path.join(RELEASES_DIR, zip_name)
+    zip_path = os.path.join(addon_zips_dir, zip_name)
     
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
         for root, dirs, files in os.walk(addon_path):
             # Skip unwanted directories
-            dirs[:] = [d for d in dirs if d not in ['.git', '__pycache__', '.idea']]
+            dirs[:] = [d for d in dirs if d not in ['.git', '__pycache__', '.idea', 'zips', 'releases']]
             
             for file in files:
                 if file.endswith(('.pyc', '.pyo', '.DS_Store')):
                     continue
                 
                 file_path = os.path.join(root, file)
-                arcname = os.path.relpath(file_path, REPO_ROOT)
+                arcname = os.path.relpath(file_path, REPO_ROOT) # This keeps folder structure 'plugin.program.../file'
+                # But for a repo zip, usually we want the folder inside.
+                # If we zip 'plugin.program.israelwizard', the zip should contain 'plugin.program.israelwizard/...'
+                # arcname from REPO_ROOT achieves this e.g. 'plugin.program.israelwizard/addon.xml'
                 zf.write(file_path, arcname)
     
-    print(f'[OK] Created: {zip_name}')
+    print(f'[OK] Created: {zip_path}')
     return zip_path
 
 
