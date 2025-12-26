@@ -55,7 +55,7 @@ def generate_addons_xml():
             root = ElementTree.fromstring(addon_xml)
             addon_str = ElementTree.tostring(root, encoding='unicode')
             addons_xml += f'    {addon_str}\n'
-            print(f'✓ Added: {addon_name}')
+            print(f'[OK] Added: {addon_name}')
     
     addons_xml += '</addons>\n'
     return addons_xml
@@ -69,14 +69,14 @@ def save_addons_xml(content):
     addons_path = os.path.join(OUTPUT_DIR, 'addons.xml')
     with open(addons_path, 'w', encoding='utf-8') as f:
         f.write(content)
-    print(f'✓ Generated: addons.xml')
+    print(f'[OK] Generated: addons.xml')
     
     # Generate and save MD5
     md5_hash = calculate_md5(addons_path)
     md5_path = os.path.join(OUTPUT_DIR, 'addons.xml.md5')
     with open(md5_path, 'w', encoding='utf-8') as f:
         f.write(md5_hash)
-    print(f'✓ Generated: addons.xml.md5 ({md5_hash})')
+    print(f'[OK] Generated: addons.xml.md5 ({md5_hash})')
 
 
 def create_addon_zip(addon_name, version=None):
@@ -109,7 +109,7 @@ def create_addon_zip(addon_name, version=None):
                 arcname = os.path.relpath(file_path, REPO_ROOT)
                 zf.write(file_path, arcname)
     
-    print(f'✓ Created: {zip_name}')
+    print(f'[OK] Created: {zip_name}')
     return zip_path
 
 
@@ -132,7 +132,7 @@ def validate_addon_xml(addon_path):
             print(f'✗ Missing version in {addon_xml_path}')
             return False
         
-        print(f'✓ Valid: {addon_id} v{version}')
+        print(f'[OK] Valid: {addon_id} v{version}')
         return True
         
     except Exception as e:
@@ -169,7 +169,7 @@ def main():
         for addon_name in ADDONS:
             create_addon_zip(addon_name, args.release)
     
-    print('\n✓ Repository generation complete!')
+    print('\n[OK] Repository generation complete!')
 
 
 if __name__ == '__main__':

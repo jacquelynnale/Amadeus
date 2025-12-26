@@ -57,6 +57,12 @@ class UIBuilder:
             guisettings_dest = os.path.join(USERDATA_PATH, 'guisettings.xml')
             if os.path.exists(guisettings_source):
                 xbmcvfs.copy(guisettings_source, guisettings_dest)
+            
+            # Copy advancedsettings.xml (Performance / Firestick)
+            advanced_source = os.path.join(ADDON_PATH, 'resources', 'advancedsettings.xml')
+            advanced_dest = os.path.join(USERDATA_PATH, 'advancedsettings.xml')
+            if os.path.exists(advanced_source):
+                xbmcvfs.copy(advanced_source, advanced_dest)
             return True
         except Exception as e:
             self.log(f'Apply settings error: {str(e)}', xbmc.LOGERROR)

@@ -15,7 +15,7 @@ zip = 75
 # Full Featured Build - בילד מלא
 full_name = Israel Full Build - בילד מלא
 full_version = 1.0.0
-full_url = https://github.com/jacquelynnale/kodirealdebridisraelwizard/releases/download/v1.0.0/israel-full-build-1.0.0.zip
+full_url = https://raw.githubusercontent.com/jacquelynnale/kodirealdebridisraelwizard/main/releases/israel-full-build-1.0.0.zip
 full_description = בילד מלא עם כל התוספים, הסקינים והווידג'טים. מותאם ל-Firestick ו-Android TV.
 full_kodi = 21
 full_icon = https://raw.githubusercontent.com/jacquelynnale/kodirealdebridisraelwizard/main/builds/full/icon.png
@@ -25,7 +25,7 @@ full_preview = https://www.youtube.com/watch?v=PREVIEW_VIDEO_ID
 # Fresh/Minimal Build - בילד נקי
 fresh_name = Israel Fresh Build - בילד נקי
 fresh_version = 1.0.0
-fresh_url = https://github.com/jacquelynnale/kodirealdebridisraelwizard/releases/download/v1.0.0/israel-fresh-build-1.0.0.zip
+fresh_url = https://raw.githubusercontent.com/jacquelynnale/kodirealdebridisraelwizard/main/releases/israel-full-build-1.0.0.zip
 fresh_description = בילד נקי עם תוספים בסיסיים בלבד. מושלם להתחלה נקייה.
 fresh_kodi = 21
 fresh_icon = https://raw.githubusercontent.com/jacquelynnale/kodirealdebridisraelwizard/main/builds/fresh/icon.png
