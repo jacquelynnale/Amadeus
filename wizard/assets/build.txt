@@ -1,6 +1,6 @@
 id="plugin.program.amadeuswizard"
-version="2.0.1"
-zip="https://raw.githubusercontent.com/jacquelynnale/Amadeus/main/zips/plugin.program.amadeuswizard/plugin.program.amadeuswizard-2.0.1.zip"
+version="2.0.2"
+zip="https://raw.githubusercontent.com/jacquelynnale/Amadeus/main/zips/plugin.program.amadeuswizard/plugin.program.amadeuswizard-2.0.2.zip"
 
 name="Amadeus Build - POV"
 version="9.0.0"
@@ -14,4 +14,4 @@ fanart="https://raw.githubusercontent.com/jacquelynnale/Amadeus/main/plugin.prog
 preview="http://"
 adult="no"
 info="http://"
-description="Amadeus Build v9.0 - ברוכים הבאים - Dark Gold - Full Hebrew - Zero Old Branding"
+description="Amadeus Build v9.0 - 100% Clean - No Old Branding - Hebrew - Dark Gold Theme"

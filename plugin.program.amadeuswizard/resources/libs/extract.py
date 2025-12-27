@@ -244,7 +244,7 @@ def all_with_progress(_in, _out, dp, ignore, title, progress_dialog_bg):
             sys.exit()
     #####################################################
         
-    # KODI_RD_ISRAEL    
+    # AMADEUS    
     install.restore_fentasticdata()
     
     return prog, errors, error

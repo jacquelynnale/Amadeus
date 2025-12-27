@@ -1,5 +1,5 @@
 ######################################################################
-#        KODI_RD_ISRAEL Custom Save Data Config Imports              #
+#        AMADEUS Custom Save Data Config Imports              #
 import sys
 import json
 import os

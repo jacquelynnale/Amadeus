@@ -190,7 +190,7 @@ class Config:
         self.SPEEDTEST = os.path.join(self.PLUGIN_DATA, 'SpeedTest')
         self.ARCHIVE_CACHE = os.path.join(self.TEMP, 'archive_cache')
         self.ART = os.path.join(self.PLUGIN, 'resources', 'art')
-        self.CUSTOM_ART = os.path.join(self.PLUGIN, 'resources', 'kodi_rd_israel_art')
+        self.CUSTOM_ART = os.path.join(self.PLUGIN, 'resources', 'AMADEUS_art')
         self.DEBRIDFOLD = os.path.join(self.PLUGIN_DATA, 'debrid')
         self.TRAKTFOLD = os.path.join(self.PLUGIN_DATA, 'trakt')
         self.LOGINFOLD = os.path.join(self.PLUGIN_DATA, 'login')

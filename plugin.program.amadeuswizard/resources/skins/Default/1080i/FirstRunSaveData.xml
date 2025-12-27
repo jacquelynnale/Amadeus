@@ -71,7 +71,7 @@
             <ondown>201</ondown>
             <onleft>201</onleft>
             <onright>17</onright>
-			<!-- KODI_RD_ISRAEL Note: Every commented control setting is also commented in window.py -->
+			<!-- AMADEUS Note: Every commented control setting is also commented in window.py -->
             <control type="radiobutton" id="317">
                 <width>610</width>
                 <height>40</height>

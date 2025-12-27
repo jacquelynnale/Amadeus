@@ -269,7 +269,7 @@ def show_save_data_settings():
             self.packages = 312
             self.thumbs = 313
             self.show_dialog()
-            # KODI_RD_ISRAEL Comment - Removed the following controls (commented in FirstRunSaveData.xml):
+            # AMADEUS Comment - Removed the following controls (commented in FirstRunSaveData.xml):
             # self.login, self.profiles, self.playercore, self.superfav, self.advanced
             self.controllist = [self.github_custom_save_data_config, self.trakt, self.debrid,
                                     self.sources, self.guisettings,

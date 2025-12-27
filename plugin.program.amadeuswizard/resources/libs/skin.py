@@ -84,8 +84,8 @@ def switch_to_skin(goto, title="Error"):
 def skin_to_default(title):
     if _get_old('lookandfeel.skin') not in DEFAULT_SKINS:
         from resources.libs.common import logging
-        logging.log('[COLOR {0}]{1}: KODI_RD_ISRAEL - Skip setting default Estuary skin no matter what.[/COLOR]'.format(CONFIG.COLOR2, title))
-        # KODI_RD_ISRAEL - Commented to not set back default skin on build install.  
+        logging.log('[COLOR {0}]{1}: AMADEUS - Skip setting default Estuary skin no matter what.[/COLOR]'.format(CONFIG.COLOR2, title))
+        # AMADEUS - Commented to not set back default skin on build install.  
         #skin = 'skin.estuary'
         #return switch_to_skin(skin, title)
     else:
