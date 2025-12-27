@@ -1,12 +1,12 @@
 1
-Welcome to Amadeus Wizard!
+ברוכים הבאים ל-Amadeus!
 
-Your Kodi is ready to use.
+הקודי שלך מוכן לשימוש.
 
-Features included:
-- Real Debrid integration
-- Hebrew subtitles (DarkSubs, All Subs)
-- POV, Otaku, YouTube addons
-- Optimized for Firestick/Android TV
+תכונות כלולות:
+- אינטגרציה עם Real Debrid
+- כתוביות בעברית (DarkSubs, All Subs)
+- POV, Otaku, YouTube ועוד
+- מותאם ל-Firestick/Android TV
 
-Enjoy!
+תהנה!
