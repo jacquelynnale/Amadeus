@@ -8,7 +8,7 @@ import os
 ADDON_ID = xbmcaddon.Addon().getAddonInfo('id')
 PATH = xbmcaddon.Addon().getAddonInfo('path')
 ART = os.path.join(PATH, 'resources', 'media')
-CUSTOM_ART = os.path.join(PATH, 'resources', 'israel_wizard_art')
+CUSTOM_ART = os.path.join(PATH, 'resources', 'amadeus_art')
 #########################################################
 
 #########################################################
