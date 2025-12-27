@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<advancedsettings>
+  <!-- Firestick / Android TV Optimization -->
+  <cache>
+    <buffermode>1</buffermode> <!-- Buffer all filesystems (including local network) -->
+    <memorysize>157286400</memorysize> <!-- 150MB Buffer (requires ~450MB RAM) -->
+    <readfactor>4.0</readfactor> <!-- Fill buffer 4x faster -->
+  </cache>
+  <network>
+    <curlclienttimeout>10</curlclienttimeout> <!-- Timeout faster -->
+    <curllowspeedtime>10</curllowspeedtime>
+    <httpproxyusername></httpproxyusername>
+    <httpproxypassword></httpproxypassword>
+  </network>
+  <samba>
+    <clienttimeout>10</clienttimeout>
+  </samba>
+  <imageres>512</imageres> <!-- Limit image resolution to save memory on low-end devices -->
+  <fanartres>720</fanartres> <!-- Limit fanart to 720p -->
+  <splash>false</splash> <!-- Disable splash for faster startup -->
+  <packagefoldersize>200</packagefoldersize> <!-- Limit package cache -->
+  <loglevel>-1</loglevel> <!-- Disable logging for performance -->
+  <videolibrary>
+    <dateadded>0</dateadded> <!-- Faster library scanning -->
+  </videolibrary>
+</advancedsettings>

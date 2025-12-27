@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-    <addon id="plugin.program.israelwizard" name="Israel Wizard" version="2.0.0" provider-name="Israel Kodi Community">
+    <addon id="plugin.program.amadeuswizard" name="Amadeus Wizard" version="2.0.0" provider-name="Israel Kodi Community">
     
     <requires>
         <import addon="xbmc.python" version="3.0.0" />
@@ -18,7 +18,7 @@
         <summary lang="en_GB">Professional Israeli Kodi Wizard with Real Debrid Support</summary>
         
         <description lang="en_GB">
-Israel Wizard v2.0 - OpenWizard Framework Edition
+Amadeus Wizard v2.0 - OpenWizard Framework Edition
 
 ✨ Main Features:
 • Auto-install build on first run
@@ -39,8 +39,8 @@ Israel Wizard v2.0 - OpenWizard Framework Edition
         <platform>all</platform>
         <license>GPL-3.0-only</license>
         <reuselanguageinvoker>false</reuselanguageinvoker>
-        <website>https://github.com/jacquelynnale/kodirealdebridisraelwizard</website>
-        <source>https://github.com/jacquelynnale/kodirealdebridisraelwizard</source>
+        <website>https://github.com/jacquelynnale/Amadeus</website>
+        <source>https://github.com/jacquelynnale/Amadeus</source>
         
         <assets>
             <icon>resources/icon.png</icon>
@@ -57,19 +57,19 @@ v2.0.0 (2024-12-27)
         </news>
     </extension>
 </addon>
-    <addon id="repository.israelwizard" name="Israel Wizard Repository" version="2.0.0" provider-name="Israel Kodi Community">
+    <addon id="repository.amadeuswizard" name="Amadeus Wizard Repository" version="2.0.0" provider-name="Israel Kodi Community">
     
-    <extension point="xbmc.addon.repository" name="Israel Wizard Repository">
+    <extension point="xbmc.addon.repository" name="Amadeus Wizard Repository">
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/jacquelynnale/kodirealdebridisraelwizard/main/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/jacquelynnale/kodirealdebridisraelwizard/main/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/jacquelynnale/kodirealdebridisraelwizard/main/zips</datadir>
+            <info compressed="false">https://raw.githubusercontent.com/jacquelynnale/Amadeus/main/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jacquelynnale/Amadeus/main/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jacquelynnale/Amadeus/main/zips</datadir>
         </dir>
     </extension>
     
     <extension point="xbmc.addon.metadata">
-        <summary lang="en_GB">Israel Wizard Repository</summary>
-        <description lang="en_GB">Official Israel Wizard repository. Contains the wizard and updates.</description>
+        <summary lang="en_GB">Amadeus Wizard Repository</summary>
+        <description lang="en_GB">Official Amadeus Wizard repository. Contains the wizard and updates.</description>
         <platform>all</platform>
         <assets>
             <icon>icon.png</icon>

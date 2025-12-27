@@ -1,4 +1,4 @@
-# Israel Wizard - Full Build
+# Amadeus Wizard - Full Build
 # בילד מלא
 
 This directory contains the full build backup structure.

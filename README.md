@@ -1,4 +1,4 @@
-# 🇮🇱 Israel Wizard - ישראל וויזארד
+# 🇮🇱 Amadeus Wizard - ישראל וויזארד
 
 <div dir="rtl">
 
@@ -38,11 +38,11 @@
 1. פתח קודי → הגדרות → מערכת → תוספים
 2. הפעל "מקורות לא ידועים"
 3. חזור להגדרות → מנהל קבצים → הוסף מקור
-4. הזן: `https://jacquelynnale.github.io/kodirealdebridisraelwizard`
-5. תן שם: `Israel Wizard`
-6. חזור לתוספים → התקן מקובץ ZIP → Israel Wizard
-7. בחר `repository.israelwizard-1.0.0.zip`
-8. התקן מהמאגר → Israel Wizard Repository → תוספי תוכנה
+4. הזן: `https://jacquelynnale.github.io/Amadeus`
+5. תן שם: `Amadeus Wizard`
+6. חזור לתוספים → התקן מקובץ ZIP → Amadeus Wizard
+7. בחר `repository.amadeuswizard-1.0.0.zip`
+8. התקן מהמאגר → Amadeus Wizard Repository → תוספי תוכנה
 9. בחר "ישראל וויזארד" והתקן
 
 </div>
@@ -50,10 +50,10 @@
 ### Method 2: Direct ZIP Install
 
 ```
-1. Download: repository.israelwizard-1.0.0.zip
+1. Download: repository.amadeuswizard-1.0.0.zip
 2. Kodi → Add-ons → Install from ZIP file
 3. Select the downloaded ZIP
-4. Install Israel Wizard from repository
+4. Install Amadeus Wizard from repository
 ```
 
 ---
@@ -135,7 +135,7 @@
 
 ```bash
 # Clone repository
-git clone https://github.com/jacquelynnale/kodirealdebridisraelwizard.git
+git clone https://github.com/jacquelynnale/Amadeus.git
 
 # Generate repository files
 python scripts/create_repository.py --validate
@@ -149,14 +149,14 @@ python scripts/create_repository.py --zip --release v1.0.0
 ## 📁 Repository Structure
 
 ```
-.kodirealdebridisraelwizard/
-├── plugin.program.israelwizard/    # Main wizard addon
+.Amadeus/
+├── plugin.program.amadeuswizard/    # Main wizard addon
 │   ├── addon.xml
 │   ├── main.py
 │   ├── wizard.txt
 │   └── resources/
 │       └── lib/                    # Library modules
-├── repository.israelwizard/        # Repository addon
+├── repository.amadeuswizard/        # Repository addon
 ├── scripts/                        # Build scripts
 ├── .github/workflows/              # CI/CD
 └── README.md
@@ -178,7 +178,7 @@ python scripts/create_repository.py --zip --release v1.0.0
 ## 📞 Support | תמיכה
 
 - **Telegram:** [t.me/israelkodi](https://t.me/israelkodi)
-- **GitHub Issues:** [Report a bug](https://github.com/israelwizard/kodirealdebridisraelwizard/issues)
+- **GitHub Issues:** [Report a bug](https://github.com/amadeuswizard/Amadeus/issues)
 
 ---
 

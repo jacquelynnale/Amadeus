@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.program.amadeuswizard"
+       name="Amadeus Wizard"
+       version="2.0.0"
+       provider-name="Israel Kodi Community">
+    
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests"/>
+        <import addon="script.module.six"/>
+    </requires>
+    
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    
+    <extension point="xbmc.service" library="startup.py" start="startup"/>
+    
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Professional Israeli Kodi Wizard with Real Debrid Support</summary>
+        
+        <description lang="en_GB">
+Amadeus Wizard v2.0 - OpenWizard Framework Edition
+
+✨ Main Features:
+• Auto-install build on first run
+• Full Real Debrid / Trakt / Premiumize integration
+• Backup and restore functionality
+• Automatic updates
+• Optimized for Firestick and Android TV
+
+📺 Included Addons:
+• POV - High quality streaming
+• Otaku - Anime
+• YouTube - Official
+• Hebrew Subtitles (DarkSubs, All Subs)
+        </description>
+        
+        <disclaimer lang="en_GB">This wizard is for legal use only.</disclaimer>
+        
+        <platform>all</platform>
+        <license>GPL-3.0-only</license>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <website>https://github.com/jacquelynnale/Amadeus</website>
+        <source>https://github.com/jacquelynnale/Amadeus</source>
+        
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+        
+        <news>
+v2.0.0 (2024-12-27)
+- Migrated to OpenWizard framework
+- Auto-install build on first run
+- Full Trakt/Debrid save/restore
+- Notification system
+- Speed test included
+        </news>
+    </extension>
+</addon>

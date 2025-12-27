@@ -1,4 +1,4 @@
-# Israel Wizard - Fresh Build
+# Amadeus Wizard - Fresh Build
 # בילד נקי
 
 This directory contains the minimal fresh build structure.

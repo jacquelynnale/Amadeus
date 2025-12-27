@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Israel Wizard - Build Generator
+Amadeus Wizard - Build Generator
 Creates the initial 'full' build ZIP file from the repository contents.
 """
 
@@ -31,14 +31,14 @@ def create_base_build(version='1.0.0'):
     print('[INFO] Copying addons...')
     # Copy Wizard
     shutil.copytree(
-        os.path.join(REPO_ROOT, 'plugin.program.israelwizard'),
-        os.path.join(addons_dir, 'plugin.program.israelwizard'),
+        os.path.join(REPO_ROOT, 'plugin.program.amadeuswizard'),
+        os.path.join(addons_dir, 'plugin.program.amadeuswizard'),
         ignore=shutil.ignore_patterns('*.pyc', '__pycache__', '.git*')
     )
     # Copy Repo
     shutil.copytree(
-        os.path.join(REPO_ROOT, 'repository.israelwizard'),
-        os.path.join(addons_dir, 'repository.israelwizard'),
+        os.path.join(REPO_ROOT, 'repository.amadeuswizard'),
+        os.path.join(addons_dir, 'repository.amadeuswizard'),
         ignore=shutil.ignore_patterns('*.pyc', '__pycache__', '.git*')
     )
     
@@ -46,12 +46,12 @@ def create_base_build(version='1.0.0'):
     print('[INFO] Configuring userdata...')
     
     # Copy guisettings.xml
-    src_gui = os.path.join(REPO_ROOT, 'plugin.program.israelwizard', 'guisettings', 'guisettings.xml')
+    src_gui = os.path.join(REPO_ROOT, 'plugin.program.amadeuswizard', 'guisettings', 'guisettings.xml')
     if os.path.exists(src_gui):
         shutil.copy(src_gui, os.path.join(userdata_dir, 'guisettings.xml'))
         
     # Copy advancedsettings.xml
-    src_adv = os.path.join(REPO_ROOT, 'plugin.program.israelwizard', 'resources', 'advancedsettings.xml')
+    src_adv = os.path.join(REPO_ROOT, 'plugin.program.amadeuswizard', 'resources', 'advancedsettings.xml')
     if os.path.exists(src_adv):
         shutil.copy(src_adv, os.path.join(userdata_dir, 'advancedsettings.xml'))
         

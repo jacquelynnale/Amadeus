@@ -20,8 +20,8 @@ jobs:
       
       - name: Validate Python syntax
         run: |
-          python -m py_compile plugin.program.israelwizard/main.py
-          python -m py_compile plugin.program.israelwizard/resources/lib/*.py
+          python -m py_compile plugin.program.amadeuswizard/main.py
+          python -m py_compile plugin.program.amadeuswizard/resources/lib/*.py
           python -m py_compile scripts/create_repository.py
           echo "✓ Python syntax validation passed"
       
@@ -29,7 +29,7 @@ jobs:
         run: |
           python -c "
           from xml.etree import ElementTree
-          for addon in ['plugin.program.israelwizard', 'repository.israelwizard']:
+          for addon in ['plugin.program.amadeuswizard', 'repository.amadeuswizard']:
               tree = ElementTree.parse(f'{addon}/addon.xml')
               root = tree.getroot()
               print(f'✓ {addon}: {root.get(\"id\")} v{root.get(\"version\")}')
@@ -79,8 +79,8 @@ jobs:
         with:
           files: |
             releases/*.zip
-            repository.israelwizard/addons.xml
-            repository.israelwizard/addons.xml.md5
+            repository.amadeuswizard/addons.xml
+            repository.amadeuswizard/addons.xml.md5
           generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

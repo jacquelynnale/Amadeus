@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Israel Wizard - Repository Generator
+Amadeus Wizard - Repository Generator
 Creates addons.xml, MD5 checksums, and ZIP packages for Kodi repository.
 
 Usage: python create_repository.py [--zip] [--release VERSION]
@@ -16,7 +16,7 @@ from xml.etree import ElementTree
 from xml.dom import minidom
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ADDONS = ['plugin.program.israelwizard', 'repository.israelwizard']
+ADDONS = ['plugin.program.amadeuswizard', 'repository.amadeuswizard']
 OUTPUT_DIR = REPO_ROOT  # addons.xml in root
 ZIPS_DIR = os.path.join(REPO_ROOT, 'zips')
 
@@ -190,8 +190,8 @@ def create_addon_zip(addon_name, version=None):
                 file_path = os.path.join(root, file)
                 arcname = os.path.relpath(file_path, REPO_ROOT) # This keeps folder structure 'plugin.program.../file'
                 # But for a repo zip, usually we want the folder inside.
-                # If we zip 'plugin.program.israelwizard', the zip should contain 'plugin.program.israelwizard/...'
-                # arcname from REPO_ROOT achieves this e.g. 'plugin.program.israelwizard/addon.xml'
+                # If we zip 'plugin.program.amadeuswizard', the zip should contain 'plugin.program.amadeuswizard/...'
+                # arcname from REPO_ROOT achieves this e.g. 'plugin.program.amadeuswizard/addon.xml'
                 zf.write(file_path, arcname)
     
     print(f'[OK] Created: {zip_path}')
@@ -226,14 +226,14 @@ def validate_addon_xml(addon_path):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Israel Wizard Repository Generator')
+    parser = argparse.ArgumentParser(description='Amadeus Wizard Repository Generator')
     parser.add_argument('--zip', action='store_true', help='Create ZIP packages')
     parser.add_argument('--release', type=str, help='Version for release')
     parser.add_argument('--validate', action='store_true', help='Validate addon.xml files')
     args = parser.parse_args()
     
     print('=' * 50)
-    print('Israel Wizard Repository Generator')
+    print('Amadeus Wizard Repository Generator')
     print('=' * 50)
     
     # Validate
